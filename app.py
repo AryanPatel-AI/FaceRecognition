@@ -1,21 +1,5 @@
-#import cv2
-
-# video_cap = cv2.VideoCapture(0)
-# while True:    # Capture frame-by-frame
-#     ret, video_data = video_cap.read()
-
-#     # Display the resulting frame
-#     cv2.imshow("Video_live", video_data)
-
-#     # Hit 'q' on the keyboard to quit!
-#     if cv2.waitKey(1) & 0xFF == ord("a"):
-#         break
-# # Release handle to the webcam
-# video_cap.release()
-
 import cv2
 
-# Load cascade
 face_cascade = cv2.CascadeClassifier(
     cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 )
@@ -44,5 +28,6 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord("a"):
          break
+    
 cap.release()
 cv2.destroyAllWindows()
